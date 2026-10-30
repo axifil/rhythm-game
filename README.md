@@ -19,5 +19,3 @@ Accurate hits award points and restore energy. Missed notes and off-beat presses
 - `index.html` — accessible game layout
 - `style.css` — responsive visual design
 - `script.js` — note timing, scoring, and game flow
-# rhythm-game
-A responsive browser rhythm game built with vanilla HTML, CSS, and JavaScript.

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Drop into the beat. Hit every note and build your combo in Neon Rhythm."
+    />
+    <meta name="theme-color" content="#090b14" />
+    <title>Neon Rhythm — Find your flow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="masthead">
+        <a class="brand" href="#" aria-label="Neon Rhythm home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span>NEON<span class="brand-light">RHYTHM</span></span>
+        </a>
+        <p class="edition"><span class="live-dot"></span> ARCADE EDITION</p>
+      </header>
+
+      <section class="intro" aria-labelledby="game-title">
+        <div>
+          <p class="eyebrow">YOUR MOMENT. YOUR RHYTHM.</p>
+          <h1 id="game-title">Find your <span>flow.</span></h1>
+          <p class="intro-copy">Catch the notes. Keep the streak. Own the beat.</p>
+        </div>
+        <div class="best-score" aria-label="Personal best score">
+          <span class="best-icon" aria-hidden="true">✦</span>
+          <div>
+            <span class="stat-label">PERSONAL BEST</span>
+            <strong id="best-score">000000</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="game-card" aria-label="Rhythm game">
+        <div class="scoreboard">
+          <div class="score-stat score-main">
+            <span class="stat-label">SCORE</span>
+            <strong id="score" aria-live="polite">000000</strong>
+          </div>
+          <div class="score-stat">
+            <span class="stat-label">COMBO</span>
+            <strong id="combo" aria-live="polite">× 0</strong>
+          </div>
+          <div class="score-stat health-stat">
+            <span class="stat-label">ENERGY</span>
+            <strong id="health">100%</strong>
+            <span class="health-track" aria-hidden="true"><span id="health-fill"></span></span>
+          </div>
+        </div>
+
+        <div class="game-area" id="game-area" aria-label="Four note lanes">
+          <div class="lanes" id="lanes">
+            <button class="lane lane-0" type="button" data-lane="0" aria-label="Lane one, A or left arrow">
+              <span class="lane-key">A</span>
+            </button>
+            <button class="lane lane-1" type="button" data-lane="1" aria-label="Lane two, S or down arrow">
+              <span class="lane-key">S</span>
+            </button>
+            <button class="lane lane-2" type="button" data-lane="2" aria-label="Lane three, K or up arrow">
+              <span class="lane-key">K</span>
+            </button>
+            <button class="lane lane-3" type="button" data-lane="3" aria-label="Lane four, L or right arrow">
+              <span class="lane-key">L</span>
+            </button>
+          </div>
+          <div id="note-layer" aria-hidden="true"></div>
+          <div class="hit-line" aria-hidden="true"><span></span></div>
+          <div class="feedback" id="feedback" aria-live="polite"></div>
+          <div class="game-overlay" id="game-overlay">
+            <div class="overlay-content">
+              <span class="overlay-icon" id="overlay-icon" aria-hidden="true">♫</span>
+              <p class="overlay-title" id="overlay-title">Ready when you are</p>
+              <p class="overlay-copy" id="overlay-copy">Press play to catch the beat</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-controls">
+          <button class="play-button" id="start-btn" type="button">
+            <span class="play-icon" aria-hidden="true">▶</span>
+            <span id="button-label">Start game</span>
+          </button>
+          <p class="status" id="status" aria-live="polite">
+            <span class="status-indicator"></span>
+            <span id="status-text">Press A / S / K / L or the arrow keys</span>
+          </p>
+        </div>
+      </section>
+
+      <footer class="how-to-play">
+        <div class="how-to-title"><span class="sparkle" aria-hidden="true">✳</span> HOW TO PLAY</div>
+        <p>Hit a key when a note reaches the line. Stay on beat to build your combo.</p>
+        <div class="key-guide" aria-label="Controls">
+          <span><kbd>A</kbd><kbd>S</kbd><kbd>K</kbd><kbd>L</kbd> or <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd></span>
+          <span class="guide-divider"></span>
+          <span>Keyboard or tap a lane</span>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
